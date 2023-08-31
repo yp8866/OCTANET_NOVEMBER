@@ -1,0 +1,299 @@
+/* Homepage of Netflix as on 31 August 2023 created by Yashpal Puri
+Bharat Intern Internship Task for web development  */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.sec{
+    display: flex;
+    /* height: 750px; */
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid rgb(163, 34, 34); */
+    /* margin: 10px; */
+    color: white;
+    background-color: black;
+    padding: 90px;
+    border-bottom: 8px solid rgb(44, 38, 38);
+}
+
+#sec1::before{
+    content: "";
+    background-image: url(./images/background.jpg);
+   
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 750px;
+    width: 100%;
+    z-index: -2;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: contrast(4.2) brightness(0.4) opacity(0.89);
+}
+
+.bck{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 750px;
+    z-index: -1;
+    background: linear-gradient(black,transparent,black);
+    /* filter: blur(15px); */
+}
+
+
+#sec1{
+    height: 750px;
+    color: white ;
+    margin: 0;
+    padding: 15px;
+    border-bottom: 8px solid rgb(44, 38, 38);
+    
+    
+}
+
+#sec1 nav{
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 9rem;
+}
+#sec1 nav img{
+    width: 150px;
+    height: 40px;
+}
+
+#language{
+    background: transparent;
+    color: white;
+    border: none;
+    font-size:15px;
+}
+#option{
+    border: 1px solid rgb(85, 83, 83);
+    border-radius: 3px;
+    padding: 7px 12px;
+    margin: 30px 0;
+}
+
+#sec1 nav button{
+    padding: 7px 12px;
+    margin-left: 35px;
+    background-color: rgb(208, 37, 37);
+    color: white;
+    font-size:15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 1s;
+}
+#sec1 nav button:hover{
+    background-color: rgb(147, 10, 10);
+}
+
+#sec11{
+    margin-top: 8rem;
+    margin-bottom: 6rem;
+}
+
+#sec111{
+    margin: 10px;
+}
+
+#sec111 h1{
+    width: 87%;
+    font-family: sans-serif;
+    margin: auto;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+#sec111 h2{
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+
+#sec112 input{
+    padding: 19.5px;
+    color: white;
+    text-align: left;
+    font-size: 18px;
+    width: 30%;
+    background: linear-gradient(to right,black,transparent); 
+    border: 1px solid rgb(150, 142, 142);
+    border-radius: 5px;
+}
+
+#sec112 input::placeholder{
+    color: white;
+}
+#sec112 button{
+    padding: 15px;
+    margin-left: 5px;
+    background-color: rgb(208, 37, 37);
+    color: white;
+    font-size:25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 1s;
+}
+#sec112 button:hover{
+    background-color: rgb(147, 10, 10);
+}
+#sec112 h2{
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+}
+
+
+
+/* section 2 */
+
+#sec21 h1,#sec32 h1,#sec41 h1,#sec52 h1{
+    font-family: sans-serif;
+    text-align: left;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+#sec21 h2, #sec32 h2, #sec41 h2, #sec52 h2{
+    font-family: sans-serif;
+    text-align: left;
+    font-size: 1.5;
+    margin-bottom: 15px;
+    font-weight: 400;
+
+}
+
+#sec21,#sec41{
+    margin-top: -18rem;
+}
+
+#sec4,#sec2{
+    position: relative;
+    z-index: -2;
+   
+}
+
+#sec2 video{
+    position: relative;
+    z-index: -1;
+    top: -400px;
+    left: 0;
+    
+}
+
+#sec4 video{
+    position: relative;
+    z-index: -1;
+    top: -400px;
+    left: 0;
+    width: 60%;
+    height: 60%;
+    
+}
+
+#sec6{
+    flex-direction: column;
+}
+
+#sec6 h1{
+    font-family: sans-serif;
+    font-size: 3rem;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+#sec6 #sec112 input{
+    width: 60%;
+}
+
+.quesec{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin: 4px auto;
+    padding: 14px 17px;
+    font-size: 1.5rem;
+    /* border:2px solid red; */
+    /* font-weight: bold; */
+    background-color: rgb(39, 41, 43);
+    font-family: sans-serif;
+    transition: all 0.7s;
+    cursor: pointer;
+    
+}
+
+.quesec:hover{
+    background-color: rgb(67, 69, 71);
+}
+
+.ques{
+    margin: auto 0;
+}
+
+.plus{
+    font-size: 3rem;
+    padding: 0;
+}
+
+#sec66{
+    margin-bottom: 65px;
+}
+
+#sec7{
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    align-items: start;
+    justify-content: center;
+    color: rgb(214, 208, 208);
+    background-color: black;
+    padding: 120px 150px;
+}
+
+#sec71{
+    margin-bottom: 40px;
+}
+
+#sec72{
+    margin-bottom: 30px;
+    
+}
+
+#sec73{
+    margin-bottom: 20px;
+
+    
+}
+
+
+#sec7 a{
+    color: rgb(214, 208, 208);
+}
+#sec7 li{
+    list-style: none;
+    text-align: left;
+    padding: 6px;
+}
+
+#sec72{
+    display: flex;
+    justify-content: space-between;
+    
+    width: 100%;
+}
