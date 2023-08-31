@@ -1,0 +1,62 @@
+<!-- temperature converter web application using html css and javascript -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature_Converter</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./javascript.js"></script>
+</head>
+<body>
+    <nav id="navbar">
+        <li>Home</li>
+        <li>Celsius</li>
+        <li>Kelvin</li>
+        <li>Fahrenheit</li>
+    </nav>
+
+    <h2 id="mainhead">Converting temperatures, bridging the gap between hot and cold.</h2>
+
+
+    <div class="container">
+
+        <h3>Navigating the thermometer's dual dialects.</h3>
+
+        <div id="subcnt">
+
+            <div id="subsubcnt">
+                <h5>Celsius</h5>
+                <input type="number" id="cls" placeholder="Your Value" onkeyup="tempcal(this.id)">
+            </div>
+            
+
+            <div id="subsubcnt">
+                <h5>Kelvin</h5>
+                <input type="number" id="klvn" placeholder="Your Value" onkeyup="tempcal(this.id)">
+            </div>
+            
+
+            <div id="subsubcnt">
+                <h5>Fahrenheit</h5>
+                <input type="number" id="frn" placeholder="Your Value" onkeyup="tempcal(this.id)">
+            </div>
+            
+
+
+        </div>
+        
+        <div id="allclear" onclick="clearr()">
+            <button id="allclr">Clear</button>
+        </div>
+
+
+    </div>
+
+    
+</body>
+</html>
