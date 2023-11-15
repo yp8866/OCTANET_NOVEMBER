@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+       
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+
+#nav{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    /* background-color: black; */
+    font-weight: 300;
+    font-size: 1.2rem;
+    font-family: fantasy;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    text-transform: uppercase;
+    
+    
+}
+
+.nav-item{
+    list-style: none;
+}
+
+#cursor{
+    height: 15px;
+    width: 15px;
+    background-color: hsl(105, 100%, 11%);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9;
+    
+}
+#cursorblur{
+    height: 200px;
+    width: 200px;
+    background-color: hsla(95, 100%, 25%, 0.5);
+    border-radius: 30%;
+    position: fixed;
+    z-index: 9;
+    filter: blur(100px);
+    /* transition: 0.001s; */
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+    
+}
+
+
+
+
+#main{
+    /* height: fit-content; */
+    position: relative;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    
+ 
+    
+}
+
+#main1{
+    /* margin-top: 20%; */
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 10;
+    
+    
+}
+
+#main1 h1::before{
+    content: "WELCOME. TO. YASH'S. TODO. APP";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    -webkit-text-stroke: 2px rgb(247, 31, 3);
+    z-index: -1;
+    color: rgb(0, 0, 0);
+    
+}
+#main1 h1{
+    font-size: 3.5rem;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#main2{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+    
+}
+
+#scroller{
+    margin-top: 50px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+.scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-duration: 10s;
+    animation-name: scroll;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+#scroller h4{
+    display: inline-block;
+    font-size: 3.5rem;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 20px;
+    color: black;
+    transition: all linear 0.4s;
+    -webkit-text-stroke: 2px rgb(0, 255, 85);
+}
+
+#scroller h4:hover{
+    color: greenyellow;
+    cursor: pointer;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+#task{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    gap: 20px;
+}
+#inputtask{
+    width: 60%;
+    height: 80px;
+    background-color: none;
+    border: 1px solid rgb(129, 110, 110);
+    position: relative;
+    /* margin-right: 20px; */
+}
+
+#placeholder{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    font-size: 25px;
+    transition: all 0.5s;
+}
+#inputtask input{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 15px;
+    z-index: 5;
+    transition: all 1s;
+    font-size: 25px;
+    background: none;
+    border: none;
+}
+
+
+#submitbutton button{
+    height: 80px;
+    width: 100px;
+    background-color: black;
+    font-size: 25px;
+    border: 2px solid white;
+    color: white;
+}
+#submitbutton button:hover{
+    border: 2px solid yellow;
+    cursor: pointer;
+    
+}
+#submitbutton button:hover i{
+    color: green;
+}
+#submitbutton button:active{
+    border: 2px solid green;
+}
+#priority select{
+    height: 80px;
+    width: 100px;
+    padding: 9px;
+    background-color: black;
+    font-size: 14px;
+    border: 2px solid white;
+    color: white;
+}
+#priority select:hover{
+    border: 2px solid yellow;
+    cursor: pointer;
+    color: green;
+}
+
+
+
+
+#tasklist{
+    min-height: 80vh;
+    border: 1px solid rgb(99, 93, 93);
+    width: 80%;
+    margin: 100px auto;
+    margin-bottom: 0;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+
+#tasklist h1{
+    margin-bottom: 50px;
+}
+
+.abtasks{
+    width: 100%;
+}
+.tasklist-task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(74, 70, 70);
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    height: fit-content;
+    font-size: 20px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    transition: all 1s;
+}
+
+.tasklist-task-description{
+    width: 85%;
+    text-align: justify;
+    word-wrap: break-word;
+}
+.tasklist-task button{
+    width: 5%;
+    height: 30px;    
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+}
+.tasklist-task button:hover{
+    border: 2px solid yellow;
+    cursor: pointer;
+    
+}
+.tasklist-task button:hover i{
+    color: green;
+}
+.tasklist-task button:active{
+    border: 2px solid green;
+    
+}
+
+.removing-task{
+    animation: blinking 2s;
+}
+
+@keyframes blinking {
+    0%{
+        transform: scale(1.05);
+        background-color: red;
+    }
+    25%{
+        /* transform: translateX(-5px); */
+        transform: scale(1);
+        background-color: black;
+    }
+    50%{
+        /* transform: translateX(5px); */
+        transform: scale(1.05);
+        background-color: red;
+    }
+    
+    75%{
+        /* transform: translateX(-5px); */
+        transform: scale(1);
+        background-color: black;
+    }
+    100%{
+        /* transform: translateX(5px); */
+        transform: scale(1.05);
+        background-color: red;
+    }
+    
+}
+
+
+#thankyou{
+    height: 70vh;
+    padding: 100px;
+    text-align: center;
+    font-size: 50px;
+}
+
+#footer{
+    background-color: #000;
+    font-weight: 500;
+    font-size: 1.2rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid rgb(107, 105, 101);
+    padding: 10px;
+}
+
+
